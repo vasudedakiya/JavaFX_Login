@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<Pane focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.loginCont">
+   <children>
+      <Button fx:id="login" layoutX="241.0" layoutY="262.0" mnemonicParsing="false" onAction="#loginActive" prefHeight="38.0" prefWidth="117.0" text="Log in">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <effect>
+            <ColorAdjust hue="-0.87" saturation="1.0" />
+         </effect>
+         <textFill>
+            <LinearGradient endX="0.9746031988234747" endY="0.9492063476925805" startX="0.9206349690755208" startY="0.9047619047619048">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Button>
+      <Label cache="true" contentDisplay="CENTER" depthTest="ENABLE" layoutX="235.0" layoutY="33.0" text="Sign in" textFill="#2f2c2c" textOverrun="CLIP" wrapText="true">
+         <font>
+            <Font name="System Bold" size="40.0" />
+         </font>
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
+      </Label>
+      <TextField fx:id="txtusername" layoutX="163.0" layoutY="125.0" prefHeight="38.0" prefWidth="286.0" promptText="Username">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </TextField>
+      <PasswordField fx:id="txtpassword" layoutX="163.0" layoutY="190.0" prefHeight="38.0" prefWidth="286.0" promptText="Password">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </PasswordField>
+      <Label layoutX="185.0" layoutY="360.0" text="Don't have account ?" />
+      <Hyperlink fx:id="reginow" layoutX="296.0" layoutY="357.0" onAction="#regiActive" text="Register Now" />
+      <Label fx:id="noid" layoutX="282.0" layoutY="102.0" textFill="#ff0202">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font>
+      </Label>
+      <Hyperlink fx:id="forgotpw" layoutX="347.0" layoutY="228.0" onAction="#forgotActive" text="Forgot Password?" />
+   </children>
+   <effect>
+      <ColorAdjust />
+   </effect>
+</Pane>
